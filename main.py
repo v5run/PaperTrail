@@ -45,12 +45,12 @@ def parseText(text):
 
 if __name__ == "__main__":
 
-    image = 'Photos/Joe.png'
+    image = 'resources/Photos/Joe.png'
     processed_img = processImage(image)
 
     text = extractText(processed_img)
-    
-    f = open("receiptText.txt", "w")
+
+    f = open("resources/receiptText.txt", "w")
     f.write(parseText(text))
     f.close()
 
