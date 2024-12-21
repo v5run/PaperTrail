@@ -1,0 +1,14 @@
+ { "Shop": "Joe's Diner", 
+       "items": [
+          {"item": "Burger", "price": "$10.00"}, 
+          {"item": "Salad", "price": "$8.00"}, 
+          {"item": "Soft Drink (2)", "price": "$10.00"}, 
+          {"item": "Pie", "price": "$7.00"}
+       ], 
+       "total": "$45.00", 
+       "date": "April 5, 2024"
+     } 
+
+    Please note that the date format is not strictly adhered to in this example (it's a mix of month/day/year and day/month/year). In real-world scenarios, you would expect dates to be consistently formatted as either MM/DD/YYYY or DD/MM/YYYY. 
+    Also, please note that there are some extra characters at the end of the receipt text which seem out of place. These have been ignored in this example. 
+
