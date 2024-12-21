@@ -1,1 +1,1 @@
-# ReceiptScan
+# PaperTrail!
