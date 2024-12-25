@@ -1,0 +1,13 @@
+ { "Shop": "Joe's Diner", 
+       "items": [
+          {"item": "Burger", "price": "$10.00"}, 
+          {"item": "Salad", "price": "$8.00"}, 
+          {"item": "Soft Drink (2)", "price": "$10.00"}, 
+          {"item": "Pie", "price": "$7.00"}
+       ], 
+       "total": "$45.00", 
+       "date": "April 5, 2024 1:26 PM"
+     } 
+
+    Please note that the receipt text is not perfect and may contain errors or typos. You should ignore any non-numeric characters in prices (e.g., '$' sign) when extracting the item list with their prices. 
+    Also, be aware of the quantity for each item as it might affect your output. For example, 1 x Soft Drink means there is only one soft drink purchased and not

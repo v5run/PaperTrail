@@ -1,0 +1,16 @@
+ { "Shop": "John Smith", 
+       "items": [
+         {"item": "Foros aw wm", "price": ""}, 
+         {"item": "2 entrain no me", "price": ""},
+         {"item": "2 lo wo vo", "price": ""},
+         {"item": "or vas", "price": ""},
+         {"item": "sueracan co", "price": ""}
+       ], 
+       "total": "$154.06", 
+       "date": "02/2019"
+     } 
+
+    Please note that the prices are not specified in the receipt text, so I will leave them blank for now. If you can figure out a way to extract the prices from other parts of the text or make an educated guess based on common practices, please do so and update your answer accordingly. 
+    { "Shop": "John Smith", 
+       "items": [
+         {"item": "Foros aw wm", "price":
