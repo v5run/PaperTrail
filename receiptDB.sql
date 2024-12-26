@@ -6,13 +6,13 @@ CREATE TABLE users (
     );
 
 CREATE TABLE receipts (
-    user varchar(255),
+    user_id varchar(255),
     id SERIAL,
     shop_name varchar(50),
     date DATE,
     total NUMERIC(10,2),
     PRIMARY KEY(id),
-    FOREIGN KEY(user) REFERENCES users(user_id) ON DELETE CASCADE
+    FOREIGN KEY(user_id) REFERENCES users(user_id) ON DELETE CASCADE
 );
 
 CREATE TABLE receipt_items (

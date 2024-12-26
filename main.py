@@ -2,7 +2,6 @@ import cv2 as cv
 import pytesseract
 from gpt4all import GPT4All
 
-
 model_path = "Meta-Llama-3-8B-Instruct.Q4_0.gguf"
 gpt = GPT4All(model_path)
 
