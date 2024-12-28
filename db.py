@@ -16,7 +16,7 @@ def connect_to_db():
         print(f"Error connecting to the database: {e}")
         return None
 
-
+# user_id should be a primary key
 def add_receipt(user_id, shop_name, date, total, items):
     """
     Adds a receipt to the database with associated items.

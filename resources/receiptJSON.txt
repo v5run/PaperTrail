@@ -1,16 +1,15 @@
- { "Shop": "John Smith", 
-       "items": [
-         {"item": "Foros aw wm", "price": ""}, 
-         {"item": "2 entrain no me", "price": ""},
-         {"item": "2 lo wo vo", "price": ""},
-         {"item": "or vas", "price": ""},
-         {"item": "sueracan co", "price": ""}
-       ], 
-       "total": "$154.06", 
-       "date": "02/2019"
-     } 
+ {
+        "Shop": "Joe's Diner",
+        "items": [
+            {"item": "Burger", "price": 10.0},
+            {"item": "Salad", "price": 8.0},
+            {"item": "Soft Drink (2)", "price": 20.0},
+            {"item": "Pie", "price": 7.0}
+        ],
+        "total": 45.5,
+        "date": "April 5, 2024"
+    }    
 
-    Please note that the prices are not specified in the receipt text, so I will leave them blank for now. If you can figure out a way to extract the prices from other parts of the text or make an educated guess based on common practices, please do so and update your answer accordingly. 
-    { "Shop": "John Smith", 
-       "items": [
-         {"item": "Foros aw wm", "price":
+
+
+Please note that the receipt text contains some irrelevant information and noise characters at the end (Fk yaa oad sa panueva te ic bee aaa en da ee). You should ignore these and extract only the relevant details as mentioned above.
