@@ -1,15 +1,26 @@
- {
-        "Shop": "Joe's Diner",
-        "items": [
-            {"item": "Burger", "price": 10.0},
-            {"item": "Salad", "price": 8.0},
-            {"item": "Soft Drink (2)", "price": 20.0},
-            {"item": "Pie", "price": 7.0}
-        ],
-        "total": 45.5,
-        "date": "April 5, 2024"
-    }    
+ { "Shop": "Joe's Diner", 
+       "items": [
+         {"item": "Burger", "price": 10.0},
+         {"item": "Salad", "price": 8.0}, 
+         {"item": "Soft Drink", "price": 5.0}, 
+         {"item": "Pie", "price": 7.0}
+       ],
+       "total": 45.0,
+       "date": "April 5, 2024"
+     } END
+    :END: 
 
+```python
 
-
-Please note that the receipt text contains some irrelevant information and noise characters at the end (Fk yaa oad sa panueva te ic bee aaa en da ee). You should ignore these and extract only the relevant details as mentioned above.
+import re
+receipt = """
+: Joe's Diner :
+Ocean City, NJ
+. :
+: Phone: (609) 555-5678
+Date: April 5, 2024 1:26 PM
+:
+: 1x Burger $10.00 :
+: 1 x Salad $8.00 4
+: 2 x Soft Drink $10.00
+1 x Pie

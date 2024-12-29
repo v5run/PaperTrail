@@ -15,11 +15,54 @@ def connect_to_db():
     except psycopg2.Error as e:
         print(f"Error connecting to the database: {e}")
         return None
+    
+def userID(email):
+    """
+    Checks if a user exists in the users table.
+    """
+    conn = connect_to_db()
+    if conn:
+        try:
+            cursor = conn.cursor()
+            cursor.execute("SELECT user_id FROM users WHERE email = %s;", (email,))
+            user_id = cursor.fetchone()
+            if user_id:
+                print(f"User exists with ID: {user_id[0]}")
+                return user_id[0]
+            else:
+                print("User does not exist.")
+                return None
+        except Exception as e:
+            print(f"Error checking if user exists: {e}")
+            print(f"Email: {email}")
+        finally:
+            cursor.close()
+            conn.close()
+
+def add_user(name, email, password):
+    """
+    Adds a user to the users table.
+    """
+    conn = connect_to_db()
+    if conn:
+        try:
+            cursor = conn.cursor()
+            cursor.execute("INSERT INTO users (username, email, password) VALUES (%s, %s, %s) RETURNING user_id;", (name, email, password))
+            user_id = cursor.fetchone()[0]
+            conn.commit()
+            print(f"User added with ID: {user_id}")
+            return user_id
+        except Exception as e:
+            print(f"Error adding user: {e}")
+            print(f"Username: {name}, Email: {email}, Password: {password}")
+        finally:
+            cursor.close()
+            conn.close()
 
 # user_id should be a primary key
-def add_receipt(user_id, shop_name, date, total, items):
+def add_receipt(user_id, shop_name=None, date=None, total=None, items=[]):
     """
-    Adds a receipt to the database with associated items.
+    Adds a receipt to receipts and receipts items.
     """
     conn = connect_to_db()
     if conn:
@@ -36,7 +79,7 @@ def add_receipt(user_id, shop_name, date, total, items):
             # Insert the receipt items
             for item in items:
                 cursor.execute(
-                    "INSERT INTO receipt_items (id, item_name, price) VALUES (%s, %s, %s);",
+                    "INSERT INTO receipt_items (receipt_id, item_name, price) VALUES (%s, %s, %s);",
                     (receipt_id, item["item"], item["price"])
                 )
 
@@ -45,6 +88,7 @@ def add_receipt(user_id, shop_name, date, total, items):
 
         except Exception as e:
             print(f"Error adding receipt: {e}")
+            print(f"UserID: {user_id}, Shop: {shop_name}, Date: {date}, Total: {total}, Items: {items}")
         finally:
             cursor.close()
             conn.close()
@@ -76,11 +120,12 @@ def get_receipts_for_user(user_id):
 
         except Exception as e:
             print(f"Error fetching receipts: {e}")
+            print(f"UserID: {user_id}")
         finally:
             cursor.close()
             conn.close()
 
-
+#   Testing
 if __name__ == "__main__":
     items = [
         {"item": "Milk", "price": 2.50},

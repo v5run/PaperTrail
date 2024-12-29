@@ -13,7 +13,7 @@ def askGPT(text):
     Here is the receipt text:
     {text}
 
-    ONLY PROVIDE the output in this JSON format. Do not include any other information.:
+    ONLY PROVIDE the output in this JSON format.  Do not include any other information after the JSON.:
     {{
         "Shop": <Name of Store/Shop>
         "items": [
@@ -22,7 +22,7 @@ def askGPT(text):
         ],
         "total": <Total Amount>,
         "date": "<Purchase Date>"
-    }}
+    }} END
     """
 
     response = gpt.generate(prompt)
