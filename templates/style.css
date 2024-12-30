@@ -13,13 +13,22 @@ body {
   }
   
   .logo {
-    font-size: 80px;
-    font-family: "Indie Flower", serif;
-    font-weight: 400;
-    font-style: normal;
+    font-size: 150px;
     color: white;
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 1); /* Drop shadow */
 
+  }
+  .white {
+    font-family: "Liu Jian Mao Cao", serif;
+    font-weight: 400;
+    font-style: normal;
+    color: white;
+  }
+  .purple {
+    font-family: "Sue Ellen Francisco", serif;
+    font-weight: 400;
+    font-style: normal;
+    color: #A47CF3;
   }
 
   .btn {
@@ -30,14 +39,14 @@ body {
     justify-content: center;
     align-items: center;
     gap: 12px;
-    background: #1C1A1C;
+    background: #dce8fc;
     cursor: pointer;
     transition: all 450ms ease-in-out;
   }
   
   .text {
     font-weight: 600;
-    color: #AAAAAA;
+    color: #979ea8;
     font-size: medium;
   }
   
