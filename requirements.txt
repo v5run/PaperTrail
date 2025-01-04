@@ -1,0 +1,6 @@
+opencv-python
+pytesseract
+gpt4all
+postgresql
+psycopg2
+flask
