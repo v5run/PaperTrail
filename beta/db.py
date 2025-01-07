@@ -1,4 +1,4 @@
-from sk import postgreSQL_user, postgreSQL_pass
+from beta.sk import postgreSQL_user, postgreSQL_pass
 import psycopg2
 
 # Database connection

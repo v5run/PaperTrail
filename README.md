@@ -26,7 +26,7 @@ This project aims to create a powerful, user-friendly tool that helps individual
 
 1. **Upload Receipts**: Users can upload images of receipts directly through the application.
 2. **Data Extraction**: Using OpenCV, the system extracts text and relevant information from the receipt images.
-3. **Parsing with AI**: GPT4All parses the extracted text to classify and analyze expenses.
+3. **Parsing with LLMs**: GPT4All parses the extracted text to classify and analyze expenses.
 4. **Storage:** The images are forwarded to an Amazon S3 storage bucket, and the contents of the receipt are stored in a PostgreSQL database, tied to specific users.
 
 ## Installation

@@ -4,3 +4,4 @@ gpt4all
 postgresql
 psycopg2
 flask
+boto3
